@@ -1,7 +1,5 @@
 package algorithm;
 
-import java.util.Arrays;
-
 /**
  * @author AndyChen
  * @version <ul>
@@ -12,30 +10,37 @@ import java.util.Arrays;
 public class SelectSort {
 
     public static void main(String[] args) {
-        int[] test = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        Integer[] test = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         sort(test);
         for (int i : test) {
             System.out.println(i);
         }
+        String[] test1 = {"B", "A", "D", "C", "E"};
+        sort(test1);
+        for (String i : test1) {
+            System.out.println(i);
+        }
     }
 
-    private static int[] sort(int[] array) {
+    private static <T extends Comparable<T>> T[] sort(T[] array) {
         for (int i = 0; i < array.length; i++) {
             int minIndex = i;
             for (int j = i; j < array.length; j++) {
-                if (array[j] < array[minIndex]) {
+                if (array[j].compareTo(array[minIndex]) < 0) {
                     minIndex = j;
                 }
-                swap(array, i, j);
             }
+            swap(array, minIndex, i);
         }
         return array;
     }
 
-    private static int[] swap(int[] obj, int i, int j) {
-        int temp = obj[i];
+    private static <T> T[] swap(T[] obj, int i, int j) {
+        T temp = obj[i];
         obj[i] = obj[j];
         obj[j] = temp;
         return obj;
     }
+
+
 }
