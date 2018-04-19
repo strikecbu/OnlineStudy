@@ -9,7 +9,7 @@ import algorithm.sort.tool.SortHelper;
  *          </ul>
  * @since 2018/4/18
  */
-public class InsertaionSort implements Sort {
+public class InsertionSort implements Sort {
 
     @Override
     public <T extends Comparable<T>> T[] sort(T[] array) {

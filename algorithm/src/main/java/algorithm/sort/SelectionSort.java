@@ -2,8 +2,6 @@ package algorithm.sort;
 
 import algorithm.sort.tool.SortHelper;
 
-import java.util.Date;
-
 /**
  * @author AndyChen
  * @version <ul>
@@ -11,17 +9,17 @@ import java.util.Date;
  *          </ul>
  * @since 2018/4/16
  */
-public class SelectSort implements Sort {
+public class SelectionSort implements Sort {
 
     public static void main(String[] args) {
-        SelectSort selectSort = new SelectSort();
+        SelectionSort selectionSort = new SelectionSort();
         Integer[] test = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-        selectSort.sort(test);
+        selectionSort.sort(test);
         for (int i : test) {
             System.out.println(i);
         }
         String[] test1 = {"B", "A", "D", "C", "E"};
-        selectSort.sort(test1);
+        selectionSort.sort(test1);
         for (String i : test1) {
             System.out.println(i);
         }

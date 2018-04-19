@@ -1,7 +1,7 @@
 package algorithm.sort.tool;
 
-import algorithm.sort.InsertaionSort;
-import algorithm.sort.SelectSort;
+import algorithm.sort.InsertionSort;
+import algorithm.sort.SelectionSort;
 import algorithm.sort.Sort;
 
 import java.util.Date;
@@ -17,10 +17,10 @@ import java.util.Date;
 public class SortTester {
 
     public static void main(String[] args) {
-        SelectSort selectSort = new SelectSort();
-        testSort(selectSort);
-        InsertaionSort insertaionSort = new InsertaionSort();
-        testSort(insertaionSort);
+        SelectionSort selectionSort = new SelectionSort();
+        testSort(selectionSort);
+        InsertionSort insertionSort = new InsertionSort();
+        testSort(insertionSort);
     }
 
     public static void testSort(Sort sortObj) {
