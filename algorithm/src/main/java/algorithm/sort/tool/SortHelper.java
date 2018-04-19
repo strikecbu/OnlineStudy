@@ -18,14 +18,6 @@ public class SortHelper {
         return obj;
     }
 
-    public static Integer[]copyArray(Integer[] array){
-        Integer[] integers = new Integer[array.length];
-        for (int i = 0; i < array.length; i++) {
-            integers[i] = array[i];
-        }
-        return integers;
-    }
-
     public static Integer[] randomIntArray(int numbers, int maxNumber) {
         Integer[] ints = new Integer[numbers];
         Random random = new Random();

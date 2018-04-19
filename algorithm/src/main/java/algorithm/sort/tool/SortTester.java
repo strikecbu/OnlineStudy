@@ -5,10 +5,8 @@ import algorithm.sort.InsertionSort_enhance;
 import algorithm.sort.SelectionSort;
 import algorithm.sort.Sort;
 
+import java.util.Arrays;
 import java.util.Date;
-
-import static javafx.scene.input.KeyCode.T;
-
 
 /**
  * @author AndyChen
@@ -27,15 +25,15 @@ public class SortTester {
 
         System.out.println("================= random array test ===============");
         Integer[] randomArray = SortHelper.randomIntArray(number, number);
-        testSort(selectionSort, SortHelper.copyArray(randomArray));
-        testSort(insertionSort, SortHelper.copyArray(randomArray));
-        testSort(InsertionSort_enhance, SortHelper.copyArray(randomArray));
+        testSort(selectionSort, Arrays.copyOf(randomArray, randomArray.length));
+        testSort(insertionSort, Arrays.copyOf(randomArray, randomArray.length));
+        testSort(InsertionSort_enhance, Arrays.copyOf(randomArray, randomArray.length));
 
         System.out.println("================= nearly order array test ===============");
         Integer[] nearlyOrderArray = SortHelper.randomNearlyOrderArray(number, 3000);
-        testSort(selectionSort, SortHelper.copyArray(nearlyOrderArray));
-        testSort(insertionSort, SortHelper.copyArray(nearlyOrderArray));
-        testSort(InsertionSort_enhance, SortHelper.copyArray(nearlyOrderArray));
+        testSort(selectionSort, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
+        testSort(insertionSort, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
+        testSort(InsertionSort_enhance, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
     }
 
     public static <T extends Comparable<T>> void testSort(Sort sortObj, T[] array)  {
