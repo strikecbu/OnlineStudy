@@ -1,9 +1,6 @@
 package algorithm.sort.tool;
 
-import algorithm.sort.InsertionSort;
-import algorithm.sort.InsertionSort_enhance;
-import algorithm.sort.SelectionSort;
-import algorithm.sort.Sort;
+import algorithm.sort.*;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -21,6 +18,7 @@ public class SortTester {
         Sort selectionSort = new SelectionSort();
         Sort insertionSort = new InsertionSort();
         Sort InsertionSort_enhance = new InsertionSort_enhance();
+        Sort mergeSort = new MergeSort();
         int number = 50000;
 
         System.out.println("================= random array test ===============");
@@ -28,12 +26,14 @@ public class SortTester {
         testSort(selectionSort, Arrays.copyOf(randomArray, randomArray.length));
         testSort(insertionSort, Arrays.copyOf(randomArray, randomArray.length));
         testSort(InsertionSort_enhance, Arrays.copyOf(randomArray, randomArray.length));
+        testSort(mergeSort, Arrays.copyOf(randomArray, randomArray.length));
 
         System.out.println("================= nearly order array test ===============");
         Integer[] nearlyOrderArray = SortHelper.randomNearlyOrderArray(number, 3000);
         testSort(selectionSort, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
         testSort(insertionSort, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
         testSort(InsertionSort_enhance, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
+        testSort(mergeSort, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
     }
 
     public static <T extends Comparable<T>> void testSort(Sort sortObj, T[] array)  {
