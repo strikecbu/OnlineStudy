@@ -26,6 +26,8 @@ public class MergeSort implements Sort {
         int mid = (l + r) / 2;
         mergeSort(array, l, mid);
         mergeSort(array, mid + 1, r);
+        if (array[mid].compareTo(array[mid + 1]) < 0)
+            return;
         merge(array, l, r, mid);
     }
 
