@@ -28,10 +28,10 @@ public class MergeSort implements Sort {
         mergeSort(array, mid + 1, r);
         if (array[mid].compareTo(array[mid + 1]) < 0)
             return;
-        merge(array, l, r, mid);
+        merge(array, l, mid, r);
     }
 
-    private <T extends Comparable<T>> void merge(T[] array, int l, int r, int mid) {
+    protected  <T extends Comparable<T>> void merge(T[] array, int l, int mid, int r) {
 
         T[] temp = Arrays.copyOf(array, array.length);
 
