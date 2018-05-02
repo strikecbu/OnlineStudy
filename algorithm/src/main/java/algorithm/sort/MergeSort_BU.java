@@ -1,7 +1,5 @@
 package algorithm.sort;
 
-import static sun.jvm.hotspot.oops.CellTypeState.bottom;
-
 /**
  * @author AndyChen
  * @version <ul>

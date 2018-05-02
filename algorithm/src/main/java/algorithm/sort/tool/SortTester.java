@@ -20,6 +20,7 @@ public class SortTester {
         Sort InsertionSort_enhance = new InsertionSort_enhance();
         Sort mergeSort = new MergeSort();
         Sort mergeSort_BU = new MergeSort_BU();
+        Sort quickSort = new QuickSort();
         int number = 30000;
 
         System.out.println("================= random array test ===============");
@@ -29,6 +30,7 @@ public class SortTester {
         testSort(InsertionSort_enhance, Arrays.copyOf(randomArray, randomArray.length));
         testSort(mergeSort, Arrays.copyOf(randomArray, randomArray.length));
         testSort(mergeSort_BU, Arrays.copyOf(randomArray, randomArray.length));
+        testSort(quickSort, Arrays.copyOf(randomArray, randomArray.length));
 
         System.out.println("================= nearly order array test ===============");
         Integer[] nearlyOrderArray = SortHelper.randomNearlyOrderArray(number, 3000);
@@ -37,6 +39,7 @@ public class SortTester {
         testSort(InsertionSort_enhance, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
         testSort(mergeSort, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
         testSort(mergeSort_BU, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
+        testSort(quickSort, Arrays.copyOf(nearlyOrderArray, nearlyOrderArray.length));
     }
 
     public static <T extends Comparable<T>> void testSort(Sort sortObj, T[] array)  {
